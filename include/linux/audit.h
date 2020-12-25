@@ -260,6 +260,10 @@ static inline unsigned int audit_get_sessionid(struct task_struct *tsk)
 {
 	return AUDIT_SID_UNSET;
 }
+static inline int audit_update_lsm_rules(void)
+{
+	return 0;
+}
 
 #define audit_enabled AUDIT_OFF
 
