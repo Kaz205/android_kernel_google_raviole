@@ -34,6 +34,8 @@ $(warning LSE atomics not supported by binutils)
   endif
 endif
 
+KBUILD_CFLAGS  += -mcpu=cortex-a76
+
 cc_has_k_constraint := $(call try-run,echo				\
 	'int main(void) {						\
 		asm volatile("and w0, w0, %w0" :: "K" (4294967295));	\
